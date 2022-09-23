@@ -1,0 +1,1254 @@
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+ 
+{{ 'jquery.fancybox-1.3.4.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'slick.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'slick-theme.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'fila-style.css' | asset_url | stylesheet_tag: preload: true }}
+
+                                  
+<style>
+ 
+  .container{ 
+    max-width: 1500px;
+    margin: 0 auto;
+ 
+  }
+  .productDetails .productTitle .checklist ul>li::before ,.productDetails .productTitle .idea ul li::before{
+    background-image: url("{{ '3.svg' | asset_url  }}");
+  }
+ 
+  .measure .middle .shape1 a::before{ 
+    background-image: url("{{ 'down.svg' | asset_url  }}" ); 
+}
+.measure .calculator .form-select{
+	background-image: url("{{ '9.svg' | asset_url  }}");
+  }
+  
+  .slider .slide p::before,.slider .slide p::after {
+    background-image: url("{{ 'quote.svg' | asset_url  }}");
+  }
+  .slick-loading .slick-list
+{
+    background: #fff url("{{ 'ajax-loader.gif' | asset_url  }}") center center no-repeat;
+}
+  
+</style>
+
+
+ {% assign selectedproduct = section.settings.selectedproduct  %}
+
+{%  if selectedproduct.id == product.id %}
+
+      <section class="productDetails">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="productTitle">
+                <h2>{{ product.title }}</h2>
+                <h3>{{ section.settings.subtitle }}</h3>
+                <div class="productbox d-md-none">
+                  <img src="images/1.png" alt="">
+                  <a data-fancybox="video-gallery" href="https://youtu.be/SVgAkMQKbWc" class="but btn1">
+                    <i class="fa-regular fa-circle-play"></i>Watch the video
+                  </a>
+                  <a href="#" class="but btn2"><i class="fa-light fa-map-location-dot"></i>where to buy it</a>
+                </div>
+
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'whatisitfor' -%}
+                    <div class="checklist pe-md-5">
+                      <h4>WHAT'S IT FOR</h4>
+                      <ul>
+                        {% if block.settings.one != blank %}<li>{{ block.settings.one }}</li>{% endif %}
+                        {% if block.settings.two != blank %}<li>{{ block.settings.two }}</li>{% endif %}
+                        {% if block.settings.three != blank %}<li>{{ block.settings.three }}</li>{% endif %}
+                        {% if block.settings.four != blank %}<li>{{ block.settings.four }}</li>{% endif %}
+                        {% if block.settings.five != blank %}<li>{{ block.settings.five }}</li>{% endif %}
+                        {% if block.settings.six != blank %}<li>{{ block.settings.six }}</li>{% endif %}
+                        {% if block.settings.seven != blank %}<li>{{ block.settings.seven }}</li>{% endif %}
+                        {% if block.settings.eight != blank %}<li>{{ block.settings.eight }}</li>{% endif %}
+                        {% if block.settings.nine != blank %}<li>{{ block.settings.nine }}</li>{% endif %}
+                        {% if block.settings.ten != blank %}<li>{{ block.settings.ten }}</li>{% endif %}
+                      </ul>
+                    </div> 
+                {% endcase %}
+              {% endfor %}
+
+
+                
+                   <div class="row  ">
+
+                
+                {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'advantage' -%}
+
+                  <div class="col-md-6">
+                    <div class="advantage">
+                      <h4>ADVANTAGES</h4>
+                      <ul>
+                        {% if block.settings.one != blank %}<li>{{ block.settings.one }}</li>{% endif %}
+                        {% if block.settings.two != blank %}<li>{{ block.settings.two }}</li>{% endif %}
+                        {% if block.settings.three != blank %}<li>{{ block.settings.three }}</li>{% endif %}
+                        {% if block.settings.four != blank %}<li>{{ block.settings.four }}</li>{% endif %}
+                        {% if block.settings.five != blank %}<li>{{ block.settings.five }}</li>{% endif %}
+                        {% if block.settings.six != blank %}<li>{{ block.settings.six }}</li>{% endif %}
+                        {% if block.settings.seven != blank %}<li>{{ block.settings.seven }}</li>{% endif %}
+                        {% if block.settings.eight != blank %}<li>{{ block.settings.eight }}</li>{% endif %}
+                        {% if block.settings.nine != blank %}<li>{{ block.settings.nine }}</li>{% endif %}
+                        {% if block.settings.ten != blank %}<li>{{ block.settings.ten }}</li>{% endif %}
+                        {% if block.settings.eleven != blank %}<li>{{ block.settings.eleven }}</li>{% endif %}
+                        {% if block.settings.twelv != blank %}<li>{{ block.settings.twelv }}</li>{% endif %}
+                        {% if block.settings.therteen != blank %}<li>{{ block.settings.therteen }}</li>{% endif %}
+                        {% if block.settings.forteen != blank %}<li>{{ block.settings.forteen }}</li>{% endif %}
+                        {% if block.settings.fifteen != blank %}<li>{{ block.settings.fifteen }}</li>{% endif %}
+
+ 
+                  
+                      </ul>
+                    </div>
+                  </div>
+
+                  
+                  {%- when 'ideals' -%}
+
+                    <div class="col-md-6">
+                    <div class="idea">
+                      <h4>IDEAL FOR</h4>
+                      <ul>
+                        {% if block.settings.one != blank %}<li>{{ block.settings.one }}</li>{% endif %}
+                        {% if block.settings.two != blank %}<li>{{ block.settings.two }}</li>{% endif %}
+                        {% if block.settings.three != blank %}<li>{{ block.settings.three }}</li>{% endif %}
+                        {% if block.settings.four != blank %}<li>{{ block.settings.four }}</li>{% endif %}
+                        {% if block.settings.five != blank %}<li>{{ block.settings.five }}</li>{% endif %}
+                        {% if block.settings.six != blank %}<li>{{ block.settings.six }}</li>{% endif %}
+                        {% if block.settings.seven != blank %}<li>{{ block.settings.seven }}</li>{% endif %}
+                        {% if block.settings.eight != blank %}<li>{{ block.settings.eight }}</li>{% endif %}
+                        {% if block.settings.nine != blank %}<li>{{ block.settings.nine }}</li>{% endif %}
+                        {% if block.settings.ten != blank %}<li>{{ block.settings.ten }}</li>{% endif %} 
+                      </ul>
+                    </div>
+                    </div>
+                    
+                {% endcase %}
+              {% endfor %}
+                  
+                  
+                  </div>
+
+
+
+                
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="productbox d-none d-md-block">
+                   
+
+  {%- render 'fila-product-template',
+  product: selectedproduct,
+  section_id: section.id,
+  blocks: section.blocks,
+
+  image_position: section.settings.image_position,
+  image_container_width: section.settings.image_container_size,
+  image_size: section.settings.product_image_size,
+  product_zoom_enable: section.settings.product_zoom_enable,
+  sku_enable: section.settings.sku_enable,
+  thumbnail_position: section.settings.thumbnail_position,
+  thumbnail_arrows: section.settings.thumbnail_arrows,
+  mobile_layout: section.settings.mobile_layout,
+  video_looping: section.settings.enable_video_looping,
+  video_style: section.settings.product_video_style
+-%}
+ 
+
+                  {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'watchvideo' -%} 
+                       
+                        {% if block.settings.video_url != blank %}
+                          <a data-fancybox="videogallery" href="{{ block.settings.video_url }}" class="but btn1 hvr-sweep-to-right">
+                            <i class="fa-regular fa-circle-play"></i>Watch the video
+                          </a>
+                        {% endif %}
+                      
+                        {% if block.settings.wheretoby != blank %}
+                          <a target="_blank" href="{{ block.settings.wheretoby }}" class="but btn2 hvr-sweep-to-right"><i class="fa-solid fa-map-location-dot"></i>where to buy it</a>
+                        {% endif %}
+                     
+                    {% endcase %}
+                {% endfor %}
+
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="feature">
+          <div class="container">
+            <div class="row">
+
+
+               {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'beforeafter' -%} 
+                      <div class="col-md-6">
+                          <div class="inner">
+                            <h3>BEFORE AND AFTER</h3>
+                            <span></span>
+                            <div class="box"> 
+                               <div class="beforeAfter"> 
+                                  {% if block.settings.beforeimage != blank %}  
+                                     <img class="before" src="{{ block.settings.beforeimage | img_url: '1400x'  }}" />
+                                  {% endif %}
+                                  {% if block.settings.afterimage != blank %}  
+                                     <img class="" src="{{ block.settings.afterimage | img_url: '1400x'  }}" />
+                                  {% endif %} 
+                              </div> 
+                            </div>
+                          </div>
+                        </div>  
+                      
+                      {%- when 'tutorial' -%}  
+                        <div class="col-md-6">
+                          <div class="innerR">
+                            <h3>VIDEO TUTORIAL</h3>
+                            <span></span>
+                            <div class="box" style="background-image: url({{ block.settings.video_thumbnail | img_url: '1400x'  }});"> 
+                              {% if block.settings.video_thumbnail != blank %}
+                                <a data-fancybox="tutorialvideo" href="{{ block.settings.video_url }}" class="text-center">
+                                 <i class="fa-sharp fa-solid fa-circle-play"></i>
+<!--                                   <img src="{{ block.settings.video_thumbnail | img_url: '1400x'  }}"  alt="">   -->
+                                </a>
+                                {%  endif %}
+                              
+                            </div>
+                          </div>
+                        </div>
+                    {% endcase %}
+                {% endfor %}
+                
+             
+            </div>
+          </div>
+        </section>
+
+
+        <section class="measure">
+          <div class="container">
+            <div class="row">
+
+               {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'methodofuse' -%}  
+                           <div class="col-md-4">
+                            <div class="method"> 
+                              <h3>METHOD OF USE</h3> 
+                              {{ block.settings.content }}
+
+
+                              {% if block.settings.note != blank %}
+                                <div class="shape1">
+                                  <h4>PLEASE NOTE</h4>
+                                  <p>{{ block.settings.note }}</p>
+                                </div>
+                              {%  endif %}
+                            </div>
+
+                            
+                          </div>
+                       {%- when 'coverage' -%}  
+
+                   <div class="col-md-4">
+                      <div class="middle">
+                        <h3>COVERAGE</h3>
+                        <div class="tablelist">
+                          <h4>COVERAGE AND DILUTION (1 litre):</h4>
+                          <ul>
+                            {% if block.settings.one != blank %}<li>{{ block.settings.one }}</li>{% endif %}
+                            {% if block.settings.two != blank %}<li>{{ block.settings.two }}</li>{% endif %}
+                            {% if block.settings.three != blank %}<li>{{ block.settings.three }}</li>{% endif %}
+                            {% if block.settings.four != blank %}<li>{{ block.settings.four }}</li>{% endif %}
+                            {% if block.settings.five != blank %}<li>{{ block.settings.five }}</li>{% endif %} 
+                            {% if block.settings.six != blank %}<li>{{ block.settings.six }}</li>{% endif %}
+                            {% if block.settings.seven != blank %}<li>{{ block.settings.seven }}</li>{% endif %}
+                            {% if block.settings.eight != blank %}<li>{{ block.settings.eight }}</li>{% endif %}
+                            {% if block.settings.nine != blank %}<li>{{ block.settings.nine }}</li>{% endif %}
+                            {% if block.settings.ten != blank %}<li>{{ block.settings.ten }}</li>{% endif %} 
+                            
+                          </ul>
+                        </div>
+ 
+
+                        {% if block.settings.formats != blank %}
+                          <h3>FORMATS</h3>
+                          <p>{{ block.settings.formats }}</p>
+                          {% endif %}
+                        {% if block.settings.pdflink != blank %}
+                          <div class="shape1">
+                            <a href="{{ block.settings.pdflink }}" target="_blank">{{ block.settings.Declaration }}</a>
+                          </div>
+                          {% endif %}
+                      
+                       
+                      </div>
+                    </div>
+              
+                    {%- endcase -%}
+                 {%- endfor -%}
+             
+         
+              <div class="col-md-4">
+                <div class="calculator">
+                  <h4>Calculate dosage</h4>
+                  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                  <option>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <input type="text" class="form-control" placeholder="m² to be treated" aria-label="">
+                </div>
+                <a href="#" class="but btn3 hvr-sweep-to-right">Calculate <i class="fa-solid fa-calculator"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+ {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'pdflinks' -%}   
+        <section class="wrapper">
+          <div class="container">
+            <div class="row"> 
+              {% if block.settings.pdfone != blank %}
+                <div class="col-md-4">
+                  <div class="wrapperInner">
+                    <a href="{{ block.settings.pdfonelink }}">
+                      <i class="fa-solid fa-gears"></i>
+                        <i class="fa fa-download" aria-hidden="true"></i> 
+                     {{ block.settings.pdfone }} 
+                    </a>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.settings.pdftwo != blank %}
+                <div class="col-md-4">
+                  <div class="wrapperInner"> `
+                    <a href="{{ block.settings.pdftwolink }}">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                      <i class="fa fa-download" aria-hidden="true"></i> 
+                       {{ block.settings.pdftwo }} 
+                    </a>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.settings.pdfthree != blank %}
+                <div class="col-md-4">
+                  <div class="wrapperInner borN">
+                    <a href="{{ block.settings.pdfthreelink }}">
+                      <i class="fa-solid fa-recycle"></i>
+                       {{ block.settings.pdfthree }} 
+                    </a>
+                  </div>
+                </div>
+              {% endif %} 
+            </div>
+          </div>
+       </section>  
+      {%- when "slider" -%}
+
+
+              <section class="about">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="ainner px-5">
+                  <h3>About us</h3>
+
+                  <div class="slider">
+                    {% if block.settings.content1 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content1 }}</p>
+                      <h6>{{ block.settings.title1 }}</h6>
+                    </div>
+                    {% endif %}
+                    {% if block.settings.content2 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content2 }}</p>
+                      <h6>{{ block.settings.title2 }}</h6>
+                    </div>
+                    {% endif %}
+                    {% if block.settings.content3 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content3 }}</p>
+                      <h6>{{ block.settings.title3 }}</h6>
+                    </div>
+                    {% endif %}
+
+                    
+                    {% if block.settings.content4 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content4 }}</p>
+                      <h6>{{ block.settings.title4 }}</h6>
+                    </div>
+                    {% endif %}
+
+
+
+                    
+                    {% if block.settings.content5 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content5 }}</p>
+                      <h6>{{ block.settings.title5 }}</h6>
+                    </div>
+                    {% endif %}
+                    {% if block.settings.content6 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content6 }}</p>
+                      <h6>{{ block.settings.title6 }}</h6>
+                    </div>
+                    {% endif %}
+                    {% if block.settings.content7 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content7 }}</p>
+                      <h6>{{ block.settings.title7 }}</h6>
+                    </div>
+                    {% endif %}
+                    {% if block.settings.content8 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content8 }}</p>
+                      <h6>{{ block.settings.title8 }}</h6>
+                    </div>
+                    {% endif %}
+                    {% if block.settings.content9 != blank %}
+                    <div class="slide">
+                      <p>{{ block.settings.content9 }}</p>
+                      <h6>{{ block.settings.title9 }}</h6>
+                    </div>
+                    {% endif %}
+                  
+                    
+                  </div>
+                 
+                
+               
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+      
+  {%- endcase -%}
+{%- endfor -%}
+
+
+
+{% endif %}
+
+         
+
+
+{% schema %}
+  {
+    "name": "Product Extra Feature",
+    "settings": [
+      {
+        "type":"product",
+        "label":"Select  Product",
+        "id":"selectedproduct"
+      },
+      {
+        "type":"text",
+        "label":"Sub Title",
+        "id":"subtitle"
+      },
+
+       {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "sku_enable",
+        "label": "Show SKU"
+      },
+      {
+        "type": "header",
+        "content": "Media"
+      },
+      {
+        "type": "paragraph",
+        "content": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Position",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "image_container_size",
+        "label": "Size",
+        "default": "medium",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "product_image_size",
+        "label": "Force image size",
+        "default": "square",
+        "options": [
+          {
+            "value": "natural",
+            "label": "Natural"
+          },
+          {
+            "value": "square",
+            "label": "Square (1:1)"
+          },
+          {
+            "value": "landscape",
+            "label": "Landscape (4:3)"
+          },
+          {
+            "value": "portrait",
+            "label": "Portrait (2:3)"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "product_zoom_enable",
+        "label": "Enable image zoom",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "thumbnail_position",
+        "label": "Thumbnail position",
+        "default": "beside",
+        "options": [
+          {
+            "value": "beside",
+            "label": "Next to media"
+          },
+          {
+            "value": "below",
+            "label": "Below media"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "thumbnail_arrows",
+        "label": "Show thumbnail arrows"
+      },
+      {
+        "type": "select",
+        "id": "mobile_layout",
+        "label": "Mobile layout",
+        "default": "partial",
+        "options": [
+          {
+            "value": "partial",
+            "label": "75% width"
+          },
+          {
+            "value": "full",
+            "label": "Full width"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_video_looping",
+        "label": "Enable video looping",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "product_video_style",
+        "label": "Video style",
+        "default": "muted",
+        "options": [
+          {
+            "value": "muted",
+            "label": "Video without sound"
+          },
+          {
+            "value": "unmuted",
+            "label": "Video with sound"
+          }
+        ],
+        "info": "Video with sound will not autoplay"
+      }
+    ],
+    "blocks": [
+      
+        {
+          "type": "slider",
+          "name": "About Us Slider",
+          "limit": 1,
+          "settings": [ 
+            {
+              "type": "textarea",
+              "id": "content1",
+              "label": "Add Content",
+              "default":"Easy to apply, excellent self-polishing power and good end results. I’ve still got to test how it lasts over time."
+            }, 
+            {
+              "type": "text",
+              "id": "title1",
+              "label": "Add Author Name",
+              "default":"Sandro Giuliani"
+            },
+            {
+              "type": "textarea",
+              "id": "content2",
+              "label": "Add Content"
+            }, 
+            {
+              "type": "text",
+              "id": "title2",
+              "label": "Add Author Name"
+            },
+            {
+              "type": "textarea",
+              "id": "content3",
+              "label": "Add Content"
+            }, 
+            {
+              "type": "text",
+              "id": "title3",
+              "label": "Add Author Name"
+            },
+            {
+              "type": "textarea",
+              "id": "content4",
+              "label": "Add Content"
+            }, 
+            {
+              "type": "text",
+              "id": "title4",
+              "label": "Add Author Name"
+            },
+            {
+              "type": "textarea",
+              "id": "content5",
+              "label": "Add Content"
+            }, 
+            {
+              "type": "text",
+              "id": "title5",
+              "label": "Add Author Name"
+            },
+            {
+              "type": "textarea",
+              "id": "content6",
+              "label": "Add Content"
+            }, 
+            {
+              "type": "text",
+              "id": "title6",
+              "label": "Add Author Name"
+            },
+            {
+              "type": "textarea",
+              "id": "content7",
+              "label": "Add Content"
+            }, 
+            {
+              "type": "text",
+              "id": "title7",
+              "label": "Add Author Name"
+            },
+            {
+              "type": "textarea",
+              "id": "content8",
+              "label": "Add Content"
+            }, 
+            {
+              "type": "text",
+              "id": "title8",
+              "label": "Add Author Name"
+            },
+            {
+              "type": "textarea",
+              "id": "content9",
+              "label": "Add Content"
+            }, 
+            {
+              "type": "text",
+              "id": "title9",
+              "label": "Add Author Name"
+            }
+             
+           
+          ]
+        },
+        {
+          "type": "pdflinks",
+          "name": "PDF Links",
+          "limit": 1,
+          "settings": [
+            { "type": "header", "content": "First PDF Box" },
+            {
+              "type": "text",
+              "id": "pdfonelink",
+              "label": "Add PDF Link"
+            },
+            {
+              "type": "richtext",
+              "id": "pdfone",
+              "label": "Title",
+              "default": "<p>technical<br>sheet</p>"
+            },
+            { "type": "header", "content": "Second PDF Box" },
+            {
+              "type": "text",
+              "id": "pdftwolink",
+              "label": "Add PDF Link"
+            },
+            {
+              "type": "richtext",
+              "id": "pdftwo",
+              "label": "Title",
+              "default": "<p>safety<br>sheet</p>"
+            },
+            { "type": "header", "content": "Third PDF Box" },
+            {
+              "type": "text",
+              "id": "pdfthreelink",
+              "label": "Add PDF Link"
+            },
+            {
+              "type": "richtext",
+              "id": "pdfthree",
+              "label": "Title",
+              "default": "<p>Product <br> disposal</p>"
+            }
+          ]
+        },
+        {
+          "type": "watchvideo",
+          "name": "Watch The Video",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "text",
+              "id": "video_url",
+              "label": "Add Video Link"
+            },
+            {
+              "type": "text",
+              "id": "wheretoby",
+              "label": "Where to Buy"
+            }
+          ]
+        },
+        {
+          "type": "tutorial",
+          "name": "Tutorial Video",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "text",
+              "id": "video_url",
+              "label": "Add Video Link"
+            },
+            {
+              "type": "image_picker",
+              "id": "video_thumbnail",
+              "label": "Add Video Thumbnail"
+            } 
+          ]
+        },
+       {
+        "type": "whatisitfor",
+        "name": "What is it for",
+        "limit": 1,
+        "settings": [ 
+          { "type": "text", "id": "one", "label": "Add Ideal Text", "default":"Delicately cleans all types of floors and surfaces." },
+          { "type": "text", "id": "two", "label": "Add Ideal Text", "default":"Does not affect treated and delicate surfaces."  },
+          { "type": "text", "id": "three", "label": "Add Ideal Text", "default":"It's essential for washing natural stone floors after being laid particularly those with polished finish that are sensitive to strong detergents." },
+          { "type": "text", "id": "four", "label": "Add Ideal Text", "default":"Protects outdoor floors from water and damp." },
+          { "type": "text", "id": "five", "label": "Add Ideal Text", "default":"Makes walls and coverings water-repellent." },
+          { "type": "text", "id": "six", "label": "Add Ideal Text", "default":"Ideal for concrete." },
+          { "type": "text", "id": "seven", "label": "Add Ideal Text", "default":"Protects grout joints." },
+          { "type": "text", "id": "eight", "label": "Add Ideal Text", "default":"Protects against deterioration due to weather conditions." },
+          { "type": "text", "id": "nine", "label": "Add Ideal Text", "default":"Protects grout joints." },
+          { "type": "text", "id": "ten", "label": "Add Ideal Text", "default":"Protects grout joints." }
+        ]
+      },
+       {
+        "type": "ideals",
+        "name": "IDEAL FOR",
+        "limit": 1,
+        "settings": [
+          { "type": "text", "id": "one", "label": "Add Ideal Text", "default":"UNPOLISHED MARBLE AND GRANITE" },
+          { "type": "text", "id": "two", "label": "Add Ideal Text", "default":"UNPOLISHED STONE AND AGGLOMERATES"  },
+          { "type": "text", "id": "three", "label": "Add Ideal Text", "default":"CONCRETE" },
+          { "type": "text", "id": "four", "label": "Add Ideal Text", "default":"MANUFACTURED STONE" },
+          { "type": "text", "id": "five", "label": "Add Ideal Text", "default":"MARBLE, GRANITE AND NATURAL STONE" },
+          { "type": "text", "id": "six", "label": "Add Ideal Text", "default":"PLASTIC LAMINATES AND LVT" },
+          { "type": "text", "id": "seven", "label": "Add Ideal Text", "default":"LINOLEUM, RUBBER AND PVC" },
+          { "type": "text", "id": "eight", "label": "Add Ideal Text", "default":"TERRACOTTA AND QUARRY TILES" },
+          { "type": "text", "id": "nine", "label": "Add Ideal Text", "default":"CONCRETE TILE" },
+          { "type": "text", "id": "ten", "label": "Add Ideal Text", "default":"QUARRY TILES" }
+        ]
+      },
+      {
+        "type": "advantage",
+        "name": "ADVANTAGES",
+        "limit": 1,
+        "settings": [
+          { "type": "text", "id": "one", "label": "Add Advantage Text", "default":"IT PROVIDES A BREATHABLE, LASTING AND RENEWABLE PROTECTION." },
+          { "type": "text", "id": "two", "label": "Add Advantage Text", "default":"DOES NOT AFFECT THE MATERIAL’S NATURAL LOOK." },
+          { "type": "text", "id": "three", "label": "Add Advantage Text", "default":"DOES NOT YELLOW WITH AGEING OR WITH ANY ENVIRONMENTAL CONDITION." },
+          { "type": "text", "id": "four", "label": "Add Advantage Text", "default":"HIGH PENETRATION CAPACITY." },
+          { "type": "text", "id": "five", "label": "Add Advantage Text", "default":"PROVIDES HIGH COVERAGE." },
+          { "type": "text", "id": "six", "label": "Add Advantage Text", "default":"PREVENTS MOSS AND MOULD FORMATION." },
+          { "type": "text", "id": "seven", "label": "Add Advantage Text", "default":"IT PROTECTS AGAINST EFFLORESCENCE." },
+          { "type": "text", "id": "eight", "label": "Add Advantage Text", "default":"AN A+ CLASSIFIED PRODUCT IN ACCORDANCE WITH THE FRENCH VOC REGULATION" },
+          { "type": "text", "id": "nine", "label": "Add Advantage Text", "default":"IDEAL TO CREATE PRESTIGIOUS FLOORS: ENHANCES THE BEAUTY OF THE SURFACE." },
+          { "type": "text", "id": "ten", "label": "Add Advantage Text", "default":"PET SAFE: SUITABLE FOR SPACES WITH DOMESTIC ANIMALS." },
+          { "type": "text", "id": "eleven", "label": "Add Advantage Text" },
+          { "type": "text", "id": "twelv", "label": "Add Advantage Text"},
+          { "type": "text", "id": "therteen", "label": "Add Advantage Text" },
+          { "type": "text", "id": "forteen", "label": "Add Advantage Text" },
+          { "type": "text", "id": "fifteen", "label": "Add Advantage Text" }
+        ]
+      },
+      {
+        "type": "beforeafter",
+        "name": "Before After",
+        "limit": 1,
+        "settings": [
+          { "type": "image_picker", "id": "beforeimage", "label": "Add Image for Before"  }, 
+          { "type": "image_picker", "id": "afterimage", "label": "Add Image for After" }
+        ]
+      },
+      {
+        "type": "methodofuse",
+        "name": "METHOD OF USE",
+        "limit": 1,
+        "settings": [
+          { 
+            "type": "richtext", 
+            "id": "content", 
+            "label": "Add Method of Use Description"  ,
+            "default": "<p><strong>Dilution:</strong> from 1:30 to 1:200 depending on requirements. <br> <strong>Application:</strong> For ordinary maintenance of all surfaces:Dilute <strong>CLEANER PRO</strong> at 1:200 (25 ml in 5 litres of water). No need to rinse. For more stubborn dirt, wash using more concentrated solutions.For washing after laying of delicate surfaces (marble, travertine, granite, polished agglomerates etc.):Dilute <strong>CLEANER PRO</strong> at 1:30 and wipe over the floor with a soft single-disc floor scrubber or scrubbing brush. Remove any residues using a liquid vacuum cleaner or cloth. Rinse after cleaning.For scrubber-dryer machines:Dilute <strong>CLEANER PRO</strong> at 1:200. Pour the solution into the tank.For extraordinary maintenance of heavily soiled surfaces:dilute <strong>CLEANER PRO</strong> from 1:30 to 1:50 depending on dirt intensity. Wash using a cloth or large brush. Remove the dirt and rinse.</p>"
+          },
+          { 
+            "type": "richtext", 
+            "id": "note", 
+            "label": "Please Note"  ,
+            "default": "<p>On natural stone carry out a patch test on a small surface area to check for any changes in colour. Do not apply the product externally if rain is forecast. Does not protect against acidic aggression.</p>"
+          }  
+          
+        ]
+      },
+      {
+        "type": "coverage",
+        "name": "COVERAGE SECTION",
+        "limit": 1,
+        "settings": [
+          { "type": "header", "content": "FORMATS" },
+          { "type": "richtext", "id": "formats", "label": "FORMATS" , "default":"<p>5-litre cans in boxes of 4 <br> 1 litre cans in boxes of 12</p>" },
+          { "type": "header", "content": "DECLARATION" },
+          { "type": "url", "id": "pdflink", "label": "Declaration Link"  },
+          { "type": "textarea", "id": "Declaration", "label": "Declaration Text" , "default":"Declaration of ingredients in accordance with Regulation for Detergents" },
+          
+          { "type": "header", "content": "COVERAGE" },
+          { "type": "textarea", "id": "one", "label": "Add coverage Text", "default":"<span>Maintenance 1:200</span><span>1500 m²</span>" },
+          { "type": "textarea", "id": "two", "label": "Add coverage Text", "default":"<span>Initial stone wash 1:30 </span><span>50 m²</span>" },
+          { "type": "textarea", "id": "three", "label": "Add coverage Text", "default":"<span>Natural stone 1:5-1:10</span><span>20/35 m²</span>" },
+          { "type": "textarea", "id": "four", "label": "Add coverage Text", "default":"<span>Coverage rates are indicative. </span> <span></span>" },
+          { "type": "textarea", "id": "five", "label": "Add coverage Text"},
+          { "type": "textarea", "id": "six", "label": "Add coverage Text" },
+          { "type": "textarea", "id": "seven", "label": "Add coverage Text"  },
+          { "type": "textarea", "id": "eight", "label": "Add coverage Text"  },
+          { "type": "textarea", "id": "nine", "label": "Add coverage Text"  },
+          { "type": "textarea", "id": "ten", "label": "Add coverage Text"  }
+
+          
+        ]
+      },
+
+
+
+
+      {
+        "type": "@app"
+      },
+      {
+        "type": "price",
+        "name": "Price",
+        "limit": 1
+      },
+      {
+        "type": "quantity_selector",
+        "name": "Quantity selector",
+        "limit": 1
+      },
+      {
+        "type": "variant_picker",
+        "name": "Variant picker",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "page",
+            "id": "size_chart",
+            "label": "Size chart page"
+          },
+          {
+            "type": "checkbox",
+            "id": "variant_labels",
+            "label": "Show variant labels",
+            "default": true
+          },
+          {
+            "type": "select",
+            "id": "picker_type",
+            "label": "Type",
+            "options": [
+              {
+                "value": "button",
+                "label": "Buttons"
+              },
+              {
+                "value": "dropdown",
+                "label": "Dropdown"
+              }
+            ],
+            "default": "button"
+          },
+          {
+            "type": "checkbox",
+            "id": "color_swatches",
+            "label": "Enable color swatches",
+            "info": "Requires type to be set to 'Buttons'. [Learn how to set up swatches](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)"
+          }
+        ]
+      },
+      {
+        "type": "description",
+        "name": "Description",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "is_tab",
+            "label": "Show as tab"
+          }
+        ]
+      },
+      {
+        "type": "buy_buttons",
+        "name": "Buy buttons",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_dynamic_checkout",
+            "label": "Show dynamic checkout button",
+            "info": "Lets customers check out directly using a familiar payment method. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "surface_pickup_enable",
+            "label": "Enable pickup availability feature",
+            "info": "Learn how to setup this feature [here](https://help.shopify.com/en/manual/shipping/setting-up-and-managing-your-shipping/local-methods/local-pickup)",
+            "default": true
+          }
+        ]
+      },
+      {
+        "type": "inventory_status",
+        "name": "Inventory status",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "range",
+            "id": "inventory_threshold",
+            "label": "Low inventory threshold",
+            "default": 10,
+            "min": 0,
+            "max": 20,
+            "step": 2
+          },
+          {
+            "type": "checkbox",
+            "id": "inventory_transfers_enable",
+            "label": "Show inventory transfer notice",
+            "info": "Learn how to create inventory transfers [here](https://help.shopify.com/en/manual/products/inventory/transfers/create-transfer)",
+            "default": true
+          }
+        ]
+      },
+      {
+        "type": "sales_point",
+        "name": "Sales point",
+        "settings": [
+          {
+            "type": "select",
+            "id": "icon",
+            "label": "Icon",
+            "default": "globe",
+            "options": [
+              {
+                "value": "checkmark",
+                "label": "Checkmark"
+              },
+              {
+                "value": "gift",
+                "label": "Gift"
+              },
+              {
+                "value": "globe",
+                "label": "Globe"
+              },
+              {
+                "value": "heart",
+                "label": "Heart"
+              },
+              {
+                "value": "leaf",
+                "label": "Leaf"
+              },
+              {
+                "value": "lock",
+                "label": "Lock"
+              },
+              {
+                "value": "package",
+                "label": "Package"
+              },
+              {
+                "value": "phone",
+                "label": "Phone"
+              },
+              {
+                "value": "ribbon",
+                "label": "Ribbon"
+              },
+              {
+                "value": "shield",
+                "label": "Shield"
+              },
+              {
+                "value": "tag",
+                "label": "Tag"
+              },
+              {
+                "value": "truck",
+                "label": "Truck"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Free worldwide shipping"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "default": "Text block",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "trust_badge",
+        "name": "Trust badge",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "trust_image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "tab",
+        "name": "Tab",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Shipping information"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Tab content",
+            "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
+          },
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Tab content from page"
+          }
+        ]
+      },
+      {
+        "type": "share",
+        "name": "Share on social",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Choose which platforms to share to in global theme settings"
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "name": "Separator"
+      },
+      {
+        "type": "contact",
+        "name": "Contact form",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "All submissions are sent to the customer email address of your store. [Learn more](https://help.shopify.com/en/manual/using-themes/change-the-layout/add-contact-form#view-contact-form-submissions)."
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Ask a question"
+          },
+          {
+            "type": "checkbox",
+            "id": "phone",
+            "label": "Add phone number field"
+          }
+        ]
+      },
+      {
+        "type": "custom",
+        "name": "HTML",
+        "settings": [
+          {
+            "type": "liquid",
+            "id": "code",
+            "label": "HTML",
+            "default": "<h4>Custom code block</h4><p>Use this advanced section to add custom HTML, app scripts, or liquid.</p>",
+            "info": "Supports Liquid"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Fila Extra Feature"
+      }
+    ],
+    "templates": [ "product"]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
+ 
+                    
+                  
+
+
+  <script src="https://kit.fontawesome.com/8752f134b8.js" crossorigin="anonymous"></script>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> 
+<script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
+    <script src="https://www.jqueryscript.net/demo/before-after-image-viewer/beforeafter.jquery-1.0.0.min.js"></script>
+<script>
+ 
+ $(document).ready(function(){
+            
+      $('.beforeAfter').beforeAfter({
+            movable: true,
+            clickMove: true,
+            position: 50,
+            separatorColor: '#fed100',
+            bulletColor: '#fed100' 
+        });
+ 
+      $('.slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1 ,
+          dots: true,
+      });
+            
+  
+});
+</script>   
