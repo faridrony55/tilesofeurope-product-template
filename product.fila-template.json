@@ -1,0 +1,350 @@
+{
+  "sections": {
+    "main": {
+      "type": "fila-product",
+      "disabled": true,
+      "blocks": {
+        "ba12bee0-ce64-413b-8840-ceeb0b54bdaf": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "1564a39b-c472-4491-841a-eb1e00c17c79": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "ab34aa31-9cd3-47ce-9167-6d58eede5e31": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "b19aac8a-0ed0-4751-98fb-b73daf99a986": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "ba12bee0-ce64-413b-8840-ceeb0b54bdaf",
+        "1564a39b-c472-4491-841a-eb1e00c17c79",
+        "ab34aa31-9cd3-47ce-9167-6d58eede5e31",
+        "b19aac8a-0ed0-4751-98fb-b73daf99a986"
+      ],
+      "settings": {
+        "sku_enable": true,
+        "show_sqft_price": true,
+        "specialorder": "shopify:\/\/pages\/special-order",
+        "image_position": "right",
+        "image_container_size": "medium",
+        "product_image_size": "landscape",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted",
+        "show_ready_to_ship": false
+      }
+    },
+    "1663745948872ceb7e": {
+      "type": "extra-fila-product",
+      "blocks": {
+        "eeca347b-9046-4752-8e3a-85f1f16ecac1": {
+          "type": "watchvideo",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/xnyFoXeA69U",
+            "wheretoby": "https:\/\/www.filasolutions.com\/eng\/resellers?type=hydrorep"
+          }
+        },
+        "0b27aff3-21ab-45a8-b493-15b5aa4ab29b": {
+          "type": "whatisitfor",
+          "settings": {
+            "one": "Delicately cleans all types of floors and surfaces.",
+            "two": "Does not affect treated and delicate surfaces.",
+            "three": "It's essential for washing natural stone floors after being laid particularly those with polished finish that are sensitive to strong detergents.",
+            "four": "Protects outdoor floors from water and damp.",
+            "five": "Makes walls and coverings water-repellent.",
+            "sixe": "Ideal for concrete.",
+            "seven": "Protects grout joints.",
+            "eight": "Protects against deterioration due to weather conditions.",
+            "nine": "Protects grout joints.",
+            "ten": "Protects grout joints."
+          }
+        },
+        "1a313f71-3ff9-4d30-b427-99f984afb404": {
+          "type": "advantage",
+          "settings": {
+            "one": "IT PROVIDES A BREATHABLE, LASTING AND RENEWABLE PROTECTION.",
+            "two": "DOES NOT AFFECT THE MATERIAL’S NATURAL LOOK.",
+            "three": "DOES NOT YELLOW WITH AGEING OR WITH ANY ENVIRONMENTAL CONDITION.",
+            "four": "HIGH PENETRATION CAPACITY.",
+            "five": "PROVIDES HIGH COVERAGE.",
+            "sixe": "PREVENTS MOSS AND MOULD FORMATION.",
+            "seven": "IT PROTECTS AGAINST EFFLORESCENCE.",
+            "eight": "AN A+ CLASSIFIED PRODUCT IN ACCORDANCE WITH THE FRENCH VOC REGULATION",
+            "nine": "IDEAL TO CREATE PRESTIGIOUS FLOORS: ENHANCES THE BEAUTY OF THE SURFACE.",
+            "ten": "PET SAFE: SUITABLE FOR SPACES WITH DOMESTIC ANIMALS."
+          }
+        },
+        "83a7c6bf-5068-4aa6-9b27-48f74b0a299f": {
+          "type": "ideals",
+          "settings": {
+            "one": "UNPOLISHED MARBLE AND GRANITE",
+            "two": "UNPOLISHED STONE AND AGGLOMERATES",
+            "three": "CONCRETE",
+            "four": "MANUFACTURED STONE",
+            "five": "MARBLE, GRANITE AND NATURAL STONE",
+            "sixe": "PLASTIC LAMINATES AND LVT",
+            "seven": "LINOLEUM, RUBBER AND PVC",
+            "eight": "TERRACOTTA AND QUARRY TILES",
+            "nine": "CONCRETE TILE",
+            "ten": "QUARRY TILES"
+          }
+        },
+        "03db3b8f-3f1b-47a7-a535-f5dc8b07f258": {
+          "type": "beforeafter",
+          "settings": {
+            "beforeimage": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
+            "afterimage": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg"
+          }
+        },
+        "0d0513c8-f5f0-43db-9505-6438dd9aace8": {
+          "type": "tutorial",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/SVgAkMQKbWc",
+            "video_thumbnail": "shopify:\/\/shop_images\/Borriana_Ocean_bano_7_5x30_eb7a9fe6-d302-4741-9e1d-d37de03f9124.jpg"
+          }
+        },
+        "532432b6-e3c3-453c-b9c6-e6a375396367": {
+          "type": "methodofuse",
+          "settings": {
+            "content": "<p><strong>Dilution:<\/strong> from 1:30 to 1:200 depending on requirements. <br\/><br\/> <strong>Application:<\/strong> For ordinary maintenance of all surfaces:Dilute <strong>CLEANER PRO<\/strong> at 1:200 (25 ml in 5 litres of water). No need to rinse. For more stubborn dirt, wash using more concentrated solutions.For washing after laying of delicate surfaces (marble, travertine, granite, polished agglomerates etc.):Dilute <strong>CLEANER PRO<\/strong> at 1:30 and wipe over the floor with a soft single-disc floor scrubber or scrubbing brush. Remove any residues using a liquid vacuum cleaner or cloth. Rinse after cleaning.For scrubber-dryer machines:Dilute <strong>CLEANER PRO<\/strong> at 1:200. Pour the solution into the tank.For extraordinary maintenance of heavily soiled surfaces:dilute <strong>CLEANER PRO<\/strong> from 1:30 to 1:50 depending on dirt intensity. Wash using a cloth or large brush. Remove the dirt and rinse.<\/p>",
+            "note": "<p>On natural stone carry out a patch test on a small surface area to check for any changes in colour. Do not apply the product externally if rain is forecast. Does not protect against acidic aggression.<\/p>"
+          }
+        },
+        "598df7fd-d405-457e-bfc9-4e16f476d467": {
+          "type": "coverage",
+          "settings": {
+            "formats": "<p>5-litre cans in boxes of 4 <br\/>1 litre cans in boxes of 12<\/p>",
+            "pdflink": "",
+            "Declaration": "Declaration of ingredients in accordance with Regulation for Detergents",
+            "one": "<span>Maintenance 1:200<\/span><span>1500 m²<\/span>",
+            "two": "<span>Initial stone wash 1:30 <\/span><span>50 m²<\/span>",
+            "three": "<span>Natural stone 1:5-1:10<\/span><span>20\/35 m²<\/span>",
+            "four": "<span>Coverage rates are indicative. <\/span> <span><\/span>",
+            "five": "",
+            "sixe": "",
+            "seven": "",
+            "eight": "",
+            "nine": "",
+            "ten": ""
+          }
+        },
+        "176f5964-c5d4-4a57-b9d1-44d5ae9c1ea2": {
+          "type": "pdflinks",
+          "settings": {
+            "pdfonelink": "",
+            "pdfone": "<p>technical<br\/>sheet<\/p>",
+            "pdftwolink": "",
+            "pdftwo": "<p>safety<br\/>sheet<\/p>",
+            "pdfthreelink": "",
+            "pdfthree": "<p>Product <br\/> disposal<\/p>"
+          }
+        },
+        "709c2f0a-8b94-4237-a2fe-af2ea07e0333": {
+          "type": "slider",
+          "settings": {
+            "content1": "Easy to apply, excellent self-polishing power and good end results. I’ve still got to test how it lasts over time.",
+            "title1": "Sandro Giuliani",
+            "content2": "",
+            "title2": "",
+            "content3": "",
+            "title3": "",
+            "content4": "",
+            "title4": ""
+          }
+        },
+        "fc928b3e-742e-44da-9828-1e096757e1ca": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "5f87348c-f993-47ec-ae17-a6837754e067": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "20728f6f-8d45-42b2-935f-f97220c7474a": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "1310efe4-b873-4c6b-92a3-5a1ec9bd4bbb": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        }
+      },
+      "block_order": [
+        "eeca347b-9046-4752-8e3a-85f1f16ecac1",
+        "0b27aff3-21ab-45a8-b493-15b5aa4ab29b",
+        "1a313f71-3ff9-4d30-b427-99f984afb404",
+        "83a7c6bf-5068-4aa6-9b27-48f74b0a299f",
+        "03db3b8f-3f1b-47a7-a535-f5dc8b07f258",
+        "0d0513c8-f5f0-43db-9505-6438dd9aace8",
+        "532432b6-e3c3-453c-b9c6-e6a375396367",
+        "598df7fd-d405-457e-bfc9-4e16f476d467",
+        "176f5964-c5d4-4a57-b9d1-44d5ae9c1ea2",
+        "709c2f0a-8b94-4237-a2fe-af2ea07e0333",
+        "fc928b3e-742e-44da-9828-1e096757e1ca",
+        "5f87348c-f993-47ec-ae17-a6837754e067",
+        "20728f6f-8d45-42b2-935f-f97220c7474a",
+        "1310efe4-b873-4c6b-92a3-5a1ec9bd4bbb"
+      ],
+      "settings": {
+        "selectedproduct": "deterdek",
+        "subtitle": "",
+        "divider": false,
+        "sku_enable": true,
+        "image_position": "right",
+        "image_container_size": "large",
+        "product_image_size": "natural",
+        "product_zoom_enable": false,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": false,
+        "product_video_style": "muted"
+      }
+    },
+    "1663941508dde1a48a": {
+      "type": "extra-fila-product",
+      "settings": {
+        "selectedproduct": "ps87",
+        "subtitle": "",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "blocks": {
+        "860a78d6-05a3-4305-9308-065a5a24be8a": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "2fb3bc06-6a67-4834-9b84-5dfe64a6a126": {
+          "type": "separator",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "860a78d6-05a3-4305-9308-065a5a24be8a",
+        "2fb3bc06-6a67-4834-9b84-5dfe64a6a126"
+      ],
+      "settings": {
+        "max_width": true
+      }
+    },
+    "1649920401aa4f67dd": {
+      "type": "apps",
+      "blocks": {
+        "e842f235-cebf-429e-9dcd-1668fcee18d9": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "e842f235-cebf-429e-9dcd-1668fcee18d9"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "165097803292220196": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "More 12\" X 24\"",
+        "home_featured_products": "2-5mm",
+        "show_product_price": false,
+        "show_sq_price": true,
+        "count": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "show_product_price": false,
+        "show_sq_price": true
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "show_product_price": true,
+        "show_sqt_price": true
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "settings": {
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "settings": {
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {
+        "bgimg": "none",
+        "color_scheme": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663745948872ceb7e",
+    "1663941508dde1a48a",
+    "sub",
+    "1649920401aa4f67dd",
+    "165097803292220196",
+    "recently-viewed",
+    "recommendations",
+    "more-products-vendor",
+    "more-products-collection",
+    "collection-return"
+  ]
+}
